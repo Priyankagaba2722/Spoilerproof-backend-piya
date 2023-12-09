@@ -13,7 +13,7 @@ functions:
   getTitles:
     handler: src/getTitles.handler
     environment:
-      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+      MONGODB_CONNECTION: "YOUR_CONNECTION_STRING"
     events:
       - httpApi:
           path: /getTitles
@@ -21,7 +21,7 @@ functions:
   getCharacters:
     handler: src/getCharacters.handler
     environment:
-      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+      MONGODB_CONNECTION: "YOUR_CONNECTION_STRING"
     events:
       - httpApi:
           path: /getCharacters
@@ -29,7 +29,7 @@ functions:
   userSignIn:
     handler: src/userSignIn.handler
     environment:
-      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+      MONGODB_CONNECTION: "YOUR_CONNECTION_STRING"
     events:
       - httpApi:
           path: /userSignIn
@@ -37,7 +37,7 @@ functions:
   blockTitle:
     handler: src/blockTitle.handler
     environment:
-      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+      MONGODB_CONNECTION: "YOUR_CONNECTION_STRING"
     events:
       - httpApi:
           path: /blockTitle
@@ -45,7 +45,7 @@ functions:
   unblockTitle:
     handler: src/unblockTitle.handler
     environment:
-      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+      MONGODB_CONNECTION: "YOUR_CONNECTION_STRING"
     events:
       - httpApi:
           path: /unblockTitle
@@ -53,7 +53,7 @@ functions:
   watchedTitle:
     handler: src/watchedTitle.handler
     environment:
-      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+      MONGODB_CONNECTION: "YOUR_CONNECTION_STRING"
     events:
       - httpApi:
           path: /watchedTitle
@@ -61,7 +61,7 @@ functions:
   titleDetails:
     handler: src/titleDetails.handler
     environment:
-      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+      MONGODB_CONNECTION: "YOUR_CONNECTION_STRING"
     events:
       - httpApi:
           path: /titleDetails
@@ -69,7 +69,7 @@ functions:
   getSeriesId:
     handler: src/setSeriesId.handler
     environment:
-      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+      MONGODB_CONNECTION: "YOUR_CONNECTION_STRING"
     events:
       - httpApi:
           path: /getSeriesId
