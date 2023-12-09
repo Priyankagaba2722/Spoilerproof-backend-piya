@@ -1,0 +1,76 @@
+org: priyankagaba2722
+app: spoilerfunctions
+service: spoilerfunctions
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  httpApi:
+    cors: true
+
+functions:
+  getTitles:
+    handler: src/getTitles.handler
+    environment:
+      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+    events:
+      - httpApi:
+          path: /getTitles
+          method: post
+  getCharacters:
+    handler: src/getCharacters.handler
+    environment:
+      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+    events:
+      - httpApi:
+          path: /getCharacters
+          method: post
+  userSignIn:
+    handler: src/userSignIn.handler
+    environment:
+      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+    events:
+      - httpApi:
+          path: /userSignIn
+          method: post
+  blockTitle:
+    handler: src/blockTitle.handler
+    environment:
+      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+    events:
+      - httpApi:
+          path: /blockTitle
+          method: post
+  unblockTitle:
+    handler: src/unblockTitle.handler
+    environment:
+      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+    events:
+      - httpApi:
+          path: /unblockTitle
+          method: post
+  watchedTitle:
+    handler: src/watchedTitle.handler
+    environment:
+      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+    events:
+      - httpApi:
+          path: /watchedTitle
+          method: post
+  titleDetails:
+    handler: src/titleDetails.handler
+    environment:
+      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+    events:
+      - httpApi:
+          path: /titleDetails
+          method: post
+  getSeriesId:
+    handler: src/setSeriesId.handler
+    environment:
+      MONGODB_CONNECTION: mongodb+srv://priyanka:spoilerproof@cluster0.kvvlx8o.mongodb.net/?retryWrites=true&w=majority
+    events:
+      - httpApi:
+          path: /getSeriesId
+          method: post
